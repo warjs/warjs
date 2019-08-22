@@ -1,0 +1,97 @@
+/* add css es  (optional) */
+
+body {
+  --light-color: white;
+}
+
+.menuItem {
+	overflow: auto;
+}
+
+.categoriesMenu {
+	overflow: auto;
+	width: inherit;
+	height: 90vh;
+}
+
+.categoriesList {
+	position: relative;
+	margin-right: 40px;
+	height: 100%;	
+}
+
+.has-large-font-size {
+	font-size: 16pt;
+}
+
+.postsList {
+	margin-top: 20px;
+}
+
+.subHeader {
+	padding-top: 60px;
+
+}
+
+.page {
+	margin-top: 40px;
+  padding: 12px;
+}
+
+.post {
+  padding-top: 30px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+
+.headerOfBlock {
+  padding: 30px;
+  text-align: center
+}
+
+.homePost {
+  padding: 12px;
+}
+
+.test {
+  display: inline-block;
+  margin: 2em auto;
+  border: 2px solid #000;
+  font-size: 2em;
+}
+
+.paper {
+  padding: 10px;
+}
+
+.list { 
+  top: 25px;
+  z-index: 1;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.grid_container {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.navbar_root {
+	
+}
+
+.root {
+	margin-top: 70px;	
+}
+
+.navbar_link {
+  text-decoration: none;
+  color: var(--light-color);
+}
