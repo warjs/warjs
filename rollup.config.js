@@ -39,7 +39,7 @@ export default {
       include: 'node_modules/**',
       namedExports: {
         'node_modules/react-is/index.js': ['isValidElementType', 'ForwardRef'],
-				'node_modules/@material-ui/core/styles/index.js': ['withStyles', 'makeStyles', 'lighten']
+				'node_modules/@material-ui/core/styles/index.js': ['withStyles', 'makeStyles', 'lighten', 'createMuiTheme']
       }
     })
   ]

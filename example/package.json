@@ -18,6 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "save": "rm -rf ./build/storage $$ cp -r ./public/storage ./build/storage",
     "put": "node node_modules/react-to-s3/index hrty323"
   }
 }

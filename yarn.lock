@@ -829,7 +829,7 @@
     recompose "0.28.0 - 0.30.0"
     warning "^4.0.1"
 
-"@material-ui/icons@^3.0.2":
+"@material-ui/icons@^3.9.3":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-3.0.2.tgz#d67a6dd1ec8312d3a88ec97944a63daeef24fe10"
   integrity sha512-QY/3gJnObZQ3O/e6WjH+0ah2M3MOgLOzCy8HTUoUx9B6dDrS18vP7Ycw3qrDEKlB6q1KNxy6CZHm5FCauWGy2g==
@@ -8553,11 +8553,6 @@ progress@^2.0.0:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
-
-promise-status-async@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/promise-status-async/-/promise-status-async-1.1.9.tgz#b3e8f99d82cd55731230d1b58a69bec69a19edb7"
-  integrity sha512-shqCopPHTIJGgvpMEfOf7wjyYKyHrc0fZ4bHY9g/VENwMKoRxGxTzSUL+HCKEyzuRen9ZJ0QIggXEeT2E62lTg==
 
 promise.series@^0.2.0:
   version "0.2.0"

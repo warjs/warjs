@@ -22,14 +22,15 @@ export default class WpNavbar extends Component {
 	render() {
 		const position = (this.props.position)? this.props.position : 'static';
 		const color = (this.props.color)? this.props.color : 'primary';
+		const { classes } = this.props;
+		const { theme } = this.props;
+		const classList = `${ styles.navbar_root } ${ classes.navbar }`;
 		return (
-			<div className={styles.navbar_root}>
-				<AppBar position="fixed">
-					<Toolbar>
-						{ this.props.children }
-					</Toolbar>
-				</AppBar>
-			</div>
+			<AppBar className={ classList } position="fixed" color={this.props.color}>
+				<Toolbar>
+					{ this.props.children }
+				</Toolbar>
+			</AppBar>
 		);
 	}
 }

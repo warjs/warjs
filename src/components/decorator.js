@@ -14,11 +14,12 @@ import WpPage from './page.js';
 import WpCategories from './categories.js';
 import WpCategory from './category.js';
 import WpBreadcrumbs from './breadcrumbs.js';
-//import EnhancedTable from './footer.js';
+import WpTable from '../blocks/table.js';
+const classNames = require('classnames');
 
 
 export default class WpDecorator extends Component {
-	
+		
 	constructor(props) {
 		super(props);
 		this.props = props;
@@ -27,29 +28,23 @@ export default class WpDecorator extends Component {
 
 
 	render() {
-		const normalise = value => (value - 10) * 100 / (1000 - 10);
-		const Progress = (props) => {
-			return (
-				<React.Fragment>
-					<CircularProgress variant="determinate" value={normalise(props.value)} />
-				</React.Fragment>
-			)
-		}
-		let classes = {list: 'list', menuHeader: 'menu-'}
+		const { classes } = this.props;
+		console.log(classes)
 		return (
+			<div className={ classes.decorator }>
 			<Router>
-				<WpNavbar>
-					<WpMenu />
+				<WpNavbar theme={ this.props.theme } classes={ classes }>
+					<WpMenu classes={ classes } />
 					<Typography>
 						<Link className={styles.navbar_link} to='/home/list:1'>{ this.lang.HOME.toUpperCase() }</Link>
 					</Typography>
 				</WpNavbar>
-				<WpBreadcrumbs />
-				<Grid className={styles.grid_container} container spaces={8}>
-					<Grid className={styles.subHeader} item xs={12} sm={3}>
-						<WpCategories />
+				<WpBreadcrumbs classes={ classes }/>
+				<Grid className={ styles.grid_container } container spaces={ 8 }>
+					<Grid className={ styles.subHeader } item xs={ 12 } sm={ 3 }>
+						<WpCategories classes={ classes } />
 					</Grid>
-					<Grid item xs={12} sm={6}>
+					<Grid item xs={ 12 } sm={ 6 }>
 						<Route path='/home' component={WpHome} />
 						<Route path='/post:id' component={WpPost} />
 						<Route path='/page:id' component={WpPage} />
@@ -57,8 +52,9 @@ export default class WpDecorator extends Component {
 					</Grid>
 					<Grid item sm={3}></Grid>
 				</Grid>
-			{/* TODO <EnhancedTable />*/}
 			</Router>
+			</div>
 		);
 	}
 }
+

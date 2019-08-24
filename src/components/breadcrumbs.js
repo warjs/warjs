@@ -33,7 +33,7 @@ class WpBreadcrumbs extends React.Component {
 	}
 
 	render() {
-		const classes = styles;
+		const { classes } = this.props;
 		let value = this.state.value;
 		const added = this.props.location.pathname;
 		const newAd = added.replace(/[\/:\d+]/g, '');
@@ -75,14 +75,14 @@ class WpBreadcrumbs extends React.Component {
 					}
 				})
 				return (
-					<BottomNavigation value={value} onChange={this.handleChange} className={classes.root}>
+					<BottomNavigation value={value} onChange={this.handleChange} className={styles.root}>
 						{ this.elements }
 					</BottomNavigation>
 				);
 			};
 		}
 		return (
-			<div>
+			<div className={ classes.breadcrumbs }>
 				<WpApi2
 					get={get}
 					element={elementApi}

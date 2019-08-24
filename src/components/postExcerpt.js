@@ -16,8 +16,8 @@ export default class WpPostExcerpt extends Component {
 	constructor(props) {
 		super(props);
 		this.props = props;
-		this.iconMore = <ExpandMoreIcon onClick={this.getFull} />;
-		this.iconLess = <ExpandLessIcon onClick={this.getExcerpt} />;
+		this.iconMore = <ExpandMoreIcon onClick={ this.getFull } />;
+		this.iconLess = <ExpandLessIcon onClick={ this.getExcerpt } />;
 		this.state = {
 			full: false,
 			iconTop : this.iconMore,
@@ -29,15 +29,15 @@ export default class WpPostExcerpt extends Component {
 	}
 
 	getExcerpt = () => {
-		this.setState({full: false});
-		this.setState({iconTop: this.iconMore});
-		this.setState({iconBottom: ''});
+		this.setState( { full: false } );
+		this.setState( { iconTop: this.iconMore } );
+		this.setState( { iconBottom: '' } );
 	}
 
 	getFull = () => {
-		this.setState({full: true});
-		this.setState({iconTop: this.iconLess});
-		this.setState({iconBottom: this.iconLess});
+		this.setState( { full: true } );
+		this.setState( { iconTop: this.iconLess } );
+		this.setState( { iconBottom: this.iconLess } );
 	};
 
 	render() {
@@ -45,7 +45,7 @@ export default class WpPostExcerpt extends Component {
 			let title, content, fullContent;
 			if (data !== undefined) {
 				title = data.title;
-				content = data.excerpt.replace('[&hellip;]', '...');
+				content = data.excerpt.replace( '[&hellip;]', '...' );
 				fullContent = data.content;
 			}
 			else {
@@ -54,7 +54,7 @@ export default class WpPostExcerpt extends Component {
 			}
 			return (
 				<div>
-					<Link className={styles.link} to={`/post:${this.id}`}><Typography variant="h6">{ title }  { this.state.iconTop }</Typography></Link>
+					<Link className={ styles.link } to={ `/post:${this.id}` }><Typography variant="h6">{ title }  { this.state.iconTop }</Typography></Link>
 					<Typography>{ this.state.full? html(fullContent) : html(content) }{ this.state.iconBottom }</Typography>
 				</div>
 			);
@@ -62,9 +62,9 @@ export default class WpPostExcerpt extends Component {
 		return (
 			<div>
 				<WpApi2 
-					get={'POST_FOR_ID'}
-					item={this.id}
-					element={element}
+					get={ 'POST_FOR_ID' }
+					item={ this.id }
+					element={ element }
 				/>
 			</div>
 		);

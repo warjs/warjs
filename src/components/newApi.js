@@ -75,7 +75,7 @@ class WpApi2 extends Component {
 	}
 
 	dangerousHTML(content) {
-		return <a dangerouslySetInnerHTML={{__html: content}} />;
+		return <sup dangerouslySetInnerHTML={{__html: content.toString("utf-8")}} />;
 	}
 
 	selectRequest() {

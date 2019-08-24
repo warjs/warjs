@@ -4,6 +4,10 @@ body {
   --light-color: white;
 }
 
+.table {
+	border-color: white;
+}
+
 .menuItem {
 	overflow: auto;
 }
